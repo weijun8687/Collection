@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  Collection
+//
+//  Created by WJ on 2017/8/2.
+//  Copyright © 2017年 WJ. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+
+
+#endif /* PrefixHeader_pch */

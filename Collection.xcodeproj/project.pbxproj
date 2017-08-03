@@ -15,6 +15,8 @@
 		375859B61F31706A00500F8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 375859B41F31706A00500F8C /* LaunchScreen.storyboard */; };
 		375859C11F31706A00500F8C /* CollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 375859C01F31706A00500F8C /* CollectionTests.m */; };
 		375859CC1F31706A00500F8C /* CollectionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 375859CB1F31706A00500F8C /* CollectionUITests.m */; };
+		375859DB1F31713E00500F8C /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 375859DA1F31713E00500F8C /* MyCollectionViewCell.m */; };
+		377295221F32F3BE00880A59 /* WJCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 377295211F32F3BE00880A59 /* WJCollectionViewLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,11 @@
 		375859C71F31706A00500F8C /* CollectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		375859CB1F31706A00500F8C /* CollectionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionUITests.m; sourceTree = "<group>"; };
 		375859CD1F31706A00500F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		375859D91F31713E00500F8C /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
+		375859DA1F31713E00500F8C /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
+		375859DD1F31A9E000500F8C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		377295201F32F3BE00880A59 /* WJCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJCollectionViewLayout.h; sourceTree = "<group>"; };
+		377295211F32F3BE00880A59 /* WJCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJCollectionViewLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +112,11 @@
 				375859AA1F31706A00500F8C /* AppDelegate.m */,
 				375859AC1F31706A00500F8C /* ViewController.h */,
 				375859AD1F31706A00500F8C /* ViewController.m */,
+				377295201F32F3BE00880A59 /* WJCollectionViewLayout.h */,
+				377295211F32F3BE00880A59 /* WJCollectionViewLayout.m */,
+				375859D91F31713E00500F8C /* MyCollectionViewCell.h */,
+				375859DA1F31713E00500F8C /* MyCollectionViewCell.m */,
+				375859DD1F31A9E000500F8C /* PrefixHeader.pch */,
 				375859AF1F31706A00500F8C /* Main.storyboard */,
 				375859B21F31706A00500F8C /* Assets.xcassets */,
 				375859B41F31706A00500F8C /* LaunchScreen.storyboard */,
@@ -202,6 +214,7 @@
 		3758599B1F31706A00500F8C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WJ;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = WJ;
 				TargetAttributes = {
@@ -278,6 +291,8 @@
 			files = (
 				375859AE1F31706A00500F8C /* ViewController.m in Sources */,
 				375859AB1F31706A00500F8C /* AppDelegate.m in Sources */,
+				375859DB1F31713E00500F8C /* MyCollectionViewCell.m in Sources */,
+				377295221F32F3BE00880A59 /* WJCollectionViewLayout.m in Sources */,
 				375859A81F31706A00500F8C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +443,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C5M93H4953;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Collection/PrefixHeader.pch";
 				INFOPLIST_FILE = Collection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.laowei.com.Collection;
@@ -440,6 +457,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C5M93H4953;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Collection/PrefixHeader.pch";
 				INFOPLIST_FILE = Collection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.laowei.com.Collection;
@@ -516,6 +535,7 @@
 				375859D21F31706A00500F8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		375859D31F31706A00500F8C /* Build configuration list for PBXNativeTarget "CollectionTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +544,7 @@
 				375859D51F31706A00500F8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		375859D61F31706A00500F8C /* Build configuration list for PBXNativeTarget "CollectionUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +553,7 @@
 				375859D81F31706A00500F8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
